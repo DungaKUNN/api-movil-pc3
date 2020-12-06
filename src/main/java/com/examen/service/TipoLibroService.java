@@ -6,5 +6,5 @@ import com.examen.entity.TipoLibro;
 
 public interface TipoLibroService {
 
-	public abstract List<TipoLibro> listaTipoLibro();
+	public List<TipoLibro> listaTipoLibro();
 }

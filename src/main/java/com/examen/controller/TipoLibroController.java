@@ -12,15 +12,15 @@ import com.examen.entity.TipoLibro;
 import com.examen.service.TipoLibroService;
 
 @RestController
-@RequestMapping("/api/rest/tipolibro/")
+@RequestMapping("/api/rest/tipolibro")
 public class TipoLibroController {
 	
 	
 	@Autowired
 	private TipoLibroService service;
 	
-	@GetMapping
-	public ResponseEntity<List<TipoLibro>> listaTodosTipoLibros(){
+	@GetMapping("/")
+	public ResponseEntity<List<TipoLibro>> lista(){
 		return ResponseEntity.ok(service.listaTipoLibro());
 	}
 }

@@ -15,13 +15,13 @@ public class LibroServiceImpl implements LibroService{
 	private LibroRepository repository;
 	
 	@Override
-	public Libro insertaLibro(Libro obj) {
-		return repository.save(obj);
-	}
-	
-	@Override
 	public List<Libro> listaLibro() {
 		return repository.findAll();
+	}
+
+	@Override
+	public List<Libro> listaLibroPorNombre(String tipo) {
+		return repository.listaPorNombre(tipo);
 	}
 
 }
